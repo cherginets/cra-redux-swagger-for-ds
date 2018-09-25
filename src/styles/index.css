@@ -1,504 +1,70 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain) */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline; }
+/*
+Error: File to import not found or unreadable: styles/_page_home.
+       Load paths:
+         C:/OpenServer/domains/cra-redux-swagger-for-ds/src/_ds/styles
+         C:/OpenServer/domains/cra-redux-swagger-for-ds/src/styles
+         C:/OpenServer/domains/cra-redux-swagger-for-ds/src/styles
+        on line 7 of src/_ds/index.scss
+        from line 1 of src/styles/index.scss
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+2: 
+3: @import "_page_home";
+4: @import "_page_layout";
 
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-* {
-  outline: none; }
-
-html, body {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%; }
-
-div {
-  position: relative; }
-
-body {
-  background: #F9F9FB;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-family: helveticaneuecyrroman;
-  font-size: 14px;
-  font-weight: normal; }
-
-a {
-  outline: none;
-  font-family: helveticaneuecyrmedium;
-  font-size: 14px;
-  font-weight: normal;
-  color: #1cbea0;
-  text-decoration: none;
-  cursor: pointer;
-  word-wrap: break-word;
-  overflow-wrap: break-word; }
-  a:active, a:focus {
-    color: #1cbea0;
-    text-decoration: none; }
-  a:hover {
-    color: #1cbea0;
-    text-decoration: underline; }
-
-#root {
-  height: 100%; }
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%; }
-
-.container {
-  min-width: 400px;
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .container__left, .container__right {
-    width: 49%; }
-  .container-block {
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #dadada;
-    background: #fff; }
-    .container-block-bordered {
-      background: #F9F9FB;
-      border: 2px solid #dadada; }
-      .container-block-bordered__label {
-        background: #F9F9FB;
-        padding: 0 10px;
-        font-weight: bold;
-        position: absolute;
-        left: 15px;
-        top: -10px; }
-
-table th {
-  font-family: helveticaneuecyrroman;
-  font-weight: bold; }
-table th, table td {
-  padding: 5px 0; }
-
-.m_tac {
-  text-align: center; }
-.m_tar {
-  text-align: right; }
-.m_ml0 {
-  margin-left: 0px; }
-.m_mr0 {
-  margin-right: 0px; }
-.m_mt0 {
-  margin-top: 0px; }
-.m_mb0 {
-  margin-bottom: 0px; }
-.m_ml1 {
-  margin-left: 1px; }
-.m_mr1 {
-  margin-right: 1px; }
-.m_mt1 {
-  margin-top: 1px; }
-.m_mb1 {
-  margin-bottom: 1px; }
-.m_ml2 {
-  margin-left: 2px; }
-.m_mr2 {
-  margin-right: 2px; }
-.m_mt2 {
-  margin-top: 2px; }
-.m_mb2 {
-  margin-bottom: 2px; }
-.m_ml3 {
-  margin-left: 3px; }
-.m_mr3 {
-  margin-right: 3px; }
-.m_mt3 {
-  margin-top: 3px; }
-.m_mb3 {
-  margin-bottom: 3px; }
-.m_ml4 {
-  margin-left: 4px; }
-.m_mr4 {
-  margin-right: 4px; }
-.m_mt4 {
-  margin-top: 4px; }
-.m_mb4 {
-  margin-bottom: 4px; }
-.m_ml5 {
-  margin-left: 5px; }
-.m_mr5 {
-  margin-right: 5px; }
-.m_mt5 {
-  margin-top: 5px; }
-.m_mb5 {
-  margin-bottom: 5px; }
-.m_ml6 {
-  margin-left: 6px; }
-.m_mr6 {
-  margin-right: 6px; }
-.m_mt6 {
-  margin-top: 6px; }
-.m_mb6 {
-  margin-bottom: 6px; }
-.m_ml7 {
-  margin-left: 7px; }
-.m_mr7 {
-  margin-right: 7px; }
-.m_mt7 {
-  margin-top: 7px; }
-.m_mb7 {
-  margin-bottom: 7px; }
-.m_ml8 {
-  margin-left: 8px; }
-.m_mr8 {
-  margin-right: 8px; }
-.m_mt8 {
-  margin-top: 8px; }
-.m_mb8 {
-  margin-bottom: 8px; }
-.m_ml9 {
-  margin-left: 9px; }
-.m_mr9 {
-  margin-right: 9px; }
-.m_mt9 {
-  margin-top: 9px; }
-.m_mb9 {
-  margin-bottom: 9px; }
-.m_ml10 {
-  margin-left: 10px; }
-.m_mr10 {
-  margin-right: 10px; }
-.m_mt10 {
-  margin-top: 10px; }
-.m_mb10 {
-  margin-bottom: 10px; }
-.m_ml11 {
-  margin-left: 11px; }
-.m_mr11 {
-  margin-right: 11px; }
-.m_mt11 {
-  margin-top: 11px; }
-.m_mb11 {
-  margin-bottom: 11px; }
-.m_ml12 {
-  margin-left: 12px; }
-.m_mr12 {
-  margin-right: 12px; }
-.m_mt12 {
-  margin-top: 12px; }
-.m_mb12 {
-  margin-bottom: 12px; }
-.m_ml13 {
-  margin-left: 13px; }
-.m_mr13 {
-  margin-right: 13px; }
-.m_mt13 {
-  margin-top: 13px; }
-.m_mb13 {
-  margin-bottom: 13px; }
-.m_ml14 {
-  margin-left: 14px; }
-.m_mr14 {
-  margin-right: 14px; }
-.m_mt14 {
-  margin-top: 14px; }
-.m_mb14 {
-  margin-bottom: 14px; }
-.m_ml15 {
-  margin-left: 15px; }
-.m_mr15 {
-  margin-right: 15px; }
-.m_mt15 {
-  margin-top: 15px; }
-.m_mb15 {
-  margin-bottom: 15px; }
-.m_ml16 {
-  margin-left: 16px; }
-.m_mr16 {
-  margin-right: 16px; }
-.m_mt16 {
-  margin-top: 16px; }
-.m_mb16 {
-  margin-bottom: 16px; }
-.m_ml17 {
-  margin-left: 17px; }
-.m_mr17 {
-  margin-right: 17px; }
-.m_mt17 {
-  margin-top: 17px; }
-.m_mb17 {
-  margin-bottom: 17px; }
-.m_ml18 {
-  margin-left: 18px; }
-.m_mr18 {
-  margin-right: 18px; }
-.m_mt18 {
-  margin-top: 18px; }
-.m_mb18 {
-  margin-bottom: 18px; }
-.m_ml19 {
-  margin-left: 19px; }
-.m_mr19 {
-  margin-right: 19px; }
-.m_mt19 {
-  margin-top: 19px; }
-.m_mb19 {
-  margin-bottom: 19px; }
-.m_ml20 {
-  margin-left: 20px; }
-.m_mr20 {
-  margin-right: 20px; }
-.m_mt20 {
-  margin-top: 20px; }
-.m_mb20 {
-  margin-bottom: 20px; }
-.m_mla {
-  margin-left: auto; }
-.m_mra {
-  margin-right: auto; }
-.m_mba {
-  margin-bottom: auto; }
-.m_mtb11 {
-  margin-top: 11px;
-  margin-bottom: 11px; }
-.m_p20 {
-  padding: 20px; }
-.m_w100 {
-  width: 100%; }
-.m_dib {
-  display: inline-block; }
-
-.input, .textarea {
-  border: 1px solid #dadada;
-  border-radius: 3px;
-  padding: 0 5px;
-  line-height: 2.45;
-  min-height: 32px;
-  font-family: helveticaneuecyrroman; }
-  .input::placeholder, .textarea::placeholder {
-    /* Microsoft Edge */
-    color: #aaa; }
-
-.textarea {
-  line-height: 1.3;
-  resize: vertical;
-  padding: 5px; }
-
-.select .select__control {
-  min-width: 100px;
-  min-height: 34px; }
-.select .select__menu {
-  width: auto; }
-.select .select__indicator {
-  padding: 5px; }
-
-.btn {
-  display: inline-block;
-  font-family: helveticaneuecyrmedium; }
-  .btn, .btn:active, .btn:focus, .btn:hover {
-    text-decoration: none;
-    color: #ffffff;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer; }
-  .btn:hover {
-    opacity: 0.9; }
-  .btn-green {
-    background: #52b266; }
-    .btn-green:hover {
-      background: #449855;
-      transition: all 0.1s ease; }
-    .btn-green:active {
-      background: #397f47; }
-  .btn-blue {
-    background: #4996e4; }
-    .btn-blue:hover {
-      background: #2582df;
-      transition: all 0.1s ease; }
-    .btn-blue:active {
-      background: #1d70c3; }
-  .btn-red {
-    background: #ff0000; }
-    .btn-red:hover {
-      background: #d60000;
-      transition: all 0.1s ease; }
-    .btn-red:active {
-      background: #b30000; }
-  .btn-big {
-    padding: 12px 35px; }
-  .btn-medium {
-    padding: 9px 14px; }
-  .btn-small-gray, .btn-small-gray:hover, .btn-small-gray:active {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-size: 12px;
-    color: #7e7e7e;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    font-family: helveticaneuecyrroman;
-    font-weight: 100; }
-  .btn-small-green, .btn-small-green:hover, .btn-small-green:active {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-size: 12px;
-    color: #3b8851;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    font-family: helveticaneuecyrroman;
-    font-weight: 100; }
-  .btn-small-red, .btn-small-red:hover, .btn-small-red:active {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-size: 12px;
-    color: red;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    font-family: helveticaneuecyrroman;
-    font-weight: 100; }
-  .btn-link {
-    display: inline-block;
-    padding: 5px 8px 7px;
-    background: #1cbea0;
-    color: #ffffff;
-    border-radius: 2px;
-    text-decoration: none;
-    cursor: default; }
-    .btn-link:hover, .btn-link:active, .btn-link:focus {
-      background: #1cbea0;
-      color: #ffffff;
-      text-decoration: none; }
-
-.popup-overlay {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  height: 100%;
-  overflow-y: scroll;
-  background-color: rgba(255, 255, 255, 0.75); }
-.popup-content {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 20px;
-  outline: none;
-  min-width: 300px;
-  box-sizing: border-box; }
-  .popup-content-addlink {
-    max-width: 50%;
-    overflow-y: auto;
-    max-height: 90%; }
-.popup-header {
-  display: inline-block;
-  width: 100%;
-  font-family: "Helvetica";
-  font-size: 22px;
-  border-bottom: 1px solid #d6d6d6;
-  padding-bottom: 5px;
-  margin-bottom: 20px; }
-.popup-line {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 15px;
-  height: 30px; }
-  .popup-line .Select {
-    font-weight: normal; }
-  .popup-line_label {
-    display: inline-block; }
-  .popup-line_input {
-    font-size: 14px;
-    margin-left: 10px;
-    min-width: 150px; }
-  .popup-line_flex {
-    display: flex;
-    justify-content: space-between; }
-.popup-button {
-  margin-top: 20px; }
-.popup-close {
-  position: absolute;
-  right: 5px;
-  top: 5px; }
-.popup-table {
-  border-spacing: inherit; }
-  .popup-table th {
-    font-size: 110%;
-    padding-bottom: 10px; }
-  .popup-table td {
-    border: 1px solid gray;
-    margin: 0;
-    padding: 5px 20px;
-    max-width: 300px; }
-
-.page-home {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.page-layout {
-  width: 100%;
-  display: block; }
-  .page-layout__row {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; }
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+src/_ds/index.scss:7
+src/styles/index.scss:1
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `map'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: styles/_page_home.\A        Load paths:\A          C:/OpenServer/domains/cra-redux-swagger-for-ds/src/_ds/styles\A          C:/OpenServer/domains/cra-redux-swagger-for-ds/src/styles\A          C:/OpenServer/domains/cra-redux-swagger-for-ds/src/styles\A         on line 7 of src/_ds/index.scss\A         from line 1 of src/styles/index.scss\A \A 2: \A 3: @import \"_page_home\";\A 4: @import \"_page_layout\";"; }
