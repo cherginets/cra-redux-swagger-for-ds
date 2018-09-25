@@ -15,9 +15,6 @@ class PageTest extends Component {
             <div className="container page-home">
                 <div className="m_mb20">page test</div>
                 <button className="btn btn-green btn-medium m_mb20" onClick={this.props.tmp_count_plus}>count++</button>
-                <button className="btn btn-green btn-medium m_mb20" onClick={() => {
-                    this.props.redirect("/404")
-                }}>make redirect</button>
 
                 count = {this.props.global.count}
             </div>
