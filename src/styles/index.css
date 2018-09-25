@@ -501,4 +501,37 @@ table th, table td {
     justify-content: flex-start;
     align-items: flex-start; }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start; }
+.header__link {
+  display: block;
+  margin-right: 20px; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  background: #333c4e; }
+  .header a {
+    color: white;
+    font-weight: 300; }
+
+.footer {
+  margin-top: auto;
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #727272;
+  font-size: 14px;
+  font-family: helveticaneuecyrlight;
+  line-height: 70px;
+  text-align: center;
+  border-top: 1px solid #dadada; }
+
 /*# sourceMappingURL=index.css.map */

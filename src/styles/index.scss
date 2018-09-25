@@ -2,3 +2,31 @@
 
 @import "_page_home";
 @import "_page_layout";
+
+@import "components/_header";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #333c4e;
+  a {
+    color: white;
+    font-weight: 300;
+  }
+}
+.footer {
+  margin-top: auto;
+
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #727272;
+  font-size: 14px;
+  font-family: helveticaneuecyrlight;
+  line-height: 70px;
+  text-align: center;
+  border-top: 1px solid #dadada;
+}

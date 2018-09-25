@@ -1,0 +1,13 @@
+.header {
+  &-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__link {
+    display: block;
+    margin-right: 20px;
+  }
+}

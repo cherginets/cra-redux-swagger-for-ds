@@ -5,6 +5,8 @@ import store from './store'
 import {init_client} from "./common/Api";
 import {Provider} from 'react-redux'
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import AppRoute from './pages/Layout/AppRoute'
+import Layout from './pages/Layout/Layout'
 import PageTest from './pages/PageTest';
 import PageLayout from './pages/PageLayout';
 import PageHome from './pages/PageHome';
@@ -16,10 +18,10 @@ init_client(() => {
             <Provider store={store}>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path={"/layout"} component={PageLayout}/>
-                        <Route exact path={"/test"} component={PageTest}/>
-                        <Route exact path={"/"} component={PageHome}/>
-                        <Route path={"*"} component={Page404}/>
+                        <AppRoute layout={Layout} exact path={"/layout"} component={PageLayout}/>
+                        <AppRoute layout={Layout} exact path={"/test"} component={PageTest}/>
+                        <AppRoute layout={Layout} exact path={"/"} component={PageHome}/>
+                        <AppRoute layout={Layout}       path={"*"} component={Page404}/>
                     </Switch>
                 </BrowserRouter>
             </Provider>,
