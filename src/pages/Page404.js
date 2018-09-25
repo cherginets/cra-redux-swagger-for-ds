@@ -9,8 +9,13 @@ class Page404 extends Component {
 
     render() {
         return (
-            <div className="container">
-                404 <Link to={"/"}>go to page home</Link>
+            <div className="container page-home">
+                <div className="m_mb20">404 Not found</div>
+                <Link className="m_mb20" to={"/"}>go to page home</Link>
+                <Link className="m_mb20" to={"/test"}>go to page test</Link>
+                <Link className="m_mb20" to={"/layout"}>go to page layout</Link>
+                <button className="btn btn-green btn-medium m_mb20" onClick={this.props.tmp_count_plus}>count++</button>
+                count = {this.props.global.count}
             </div>
         );
     }
