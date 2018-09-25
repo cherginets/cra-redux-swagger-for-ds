@@ -2,6 +2,7 @@
  * На этой странице собраны и описаны элементы дизайна специфичные для всех проектов DS
  */
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Select from 'react-select';
 import Popup from "../_ds/components/Popup";
 
@@ -25,6 +26,7 @@ class PageLayout extends React.Component {
     };
     render() {
         return <div className="container page-layout">
+            <div className="m_mb20"><Link to={"/"}>go to page home</Link></div>
             <h1>Базовые элементы DS</h1>
             <div className="page-layout__row">
 

@@ -12,10 +12,11 @@ class PageTest extends Component {
 
     render() {
         return (
-            <div className="container login-container">
-                page test <Link to={"/"}>go to page home</Link>
-                <button onClick={this.props.tmp_count_plus}>count++</button>
-                <br/>
+            <div className="container page-home">
+                <div className="m_mb20">page test</div>
+                <Link className="m_mb20" to={"/"}>go to page home</Link>
+                <Link className="m_mb20" to={"/layout"}>go to page layout</Link>
+                <button className="m_mb20" onClick={this.props.tmp_count_plus}>count++</button>
                 count = {this.props.global.count}
             </div>
         );

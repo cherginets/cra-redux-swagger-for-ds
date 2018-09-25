@@ -1,0 +1,11 @@
+.page-layout {
+  width: 100%;
+  display: block;
+  &__row {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

@@ -413,16 +413,6 @@ table th, table td {
       color: #ffffff;
       text-decoration: none; }
 
-.page-layout {
-  width: 100%;
-  display: block; }
-  .page-layout__row {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; }
-
 .popup-overlay {
   position: fixed;
   display: flex;
@@ -494,5 +484,21 @@ table th, table td {
     margin: 0;
     padding: 5px 20px;
     max-width: 300px; }
+
+.page-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.page-layout {
+  width: 100%;
+  display: block; }
+  .page-layout__row {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
 
 /*# sourceMappingURL=index.css.map */
