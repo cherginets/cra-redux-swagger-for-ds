@@ -25,6 +25,7 @@ class PageLayout extends React.Component {
     };
     render() {
         return <div className="container page-layout">
+            <h1>Базовые элементы DS</h1>
             <div className="page-layout__row">
 
                 <Select
@@ -149,7 +150,7 @@ class PageLayout extends React.Component {
                     <button className="btn btn-blue btn-medium m_mr20">popup</button>
                 </Popup>
             </div>
-            <h2>Grid</h2>
+            {/*<h2>Grid</h2>*/}
             <div className="page-layout__row">
 
             </div>

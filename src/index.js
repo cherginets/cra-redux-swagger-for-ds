@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import store from './store'
 import {init_client} from "./common/Api";
 import {Provider} from 'react-redux'
