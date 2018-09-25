@@ -6,6 +6,7 @@ import {init_client} from "./common/Api";
 import {Provider} from 'react-redux'
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import PageTest from './pages/PageTest';
+import PageLayout from './pages/PageLayout';
 import PageHome from './pages/PageHome';
 import Page404 from './pages/Page404';
 import registerServiceWorker from './registerServiceWorker';
@@ -15,6 +16,7 @@ init_client(() => {
             <Provider store={store}>
                 <BrowserRouter>
                     <Switch>
+                        <Route exact path={"/layout"} component={PageLayout}/>
                         <Route exact path={"/test"} component={PageTest}/>
                         <Route exact path={"/"} component={PageHome}/>
                         <Route path={"*"} component={Page404}/>
