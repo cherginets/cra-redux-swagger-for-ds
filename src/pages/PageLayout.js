@@ -5,6 +5,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Select from 'react-select';
 import Popup from "../_ds/components/Popup";
+import Grid from "../_ds/components/Grid";
+import Block from "../_ds/components/Block";
 
 class PageLayout extends React.Component {
     state = {
@@ -25,7 +27,7 @@ class PageLayout extends React.Component {
         popup_1_field_3: true,
     };
     render() {
-        return <div className="container page-layout">
+        return <div className="container">
             <h1>Базовые элементы DS</h1>
             <div className="page-layout__row">
 
@@ -49,26 +51,32 @@ class PageLayout extends React.Component {
                 <input className="input m_ml10 m_mr20" type="text" placeholder=".input" />
                 <textarea className="textarea" rows={3} placeholder={".textarea"} />
             </div>
-            <div className="page-layout__row">
-            </div>
-            <div className="page-layout__row">
-                <button className="btn">Button</button>
-            </div>
-            <div className="page-layout__row">
-                <button className="btn btn-green m_mr20">Button</button>
-                <button className="btn btn-blue m_mr20">Button</button>
-                <button className="btn btn-red m_mr20">Button</button>
-            </div>
-            <div className="page-layout__row">
-                <button className="btn btn-green btn-medium">Button</button>
-                <button className="btn btn-blue btn-medium m_ml10">Button</button>
-                <button className="btn btn-red btn-medium m_ml10">Button</button>
-            </div>
-            <div className="page-layout__row">
-                <button className="btn btn-green btn-big">Button</button>
-                <button className="btn btn-blue btn-big m_ml10">Button</button>
-                <button className="btn btn-red btn-big m_ml10">Button</button>
-            </div>
+            <h1>Block and Buttons</h1>
+            <Block
+                className="m_mt20"
+                header={"Block props.header"}
+                hideable={true}
+            >
+                <div className="page-layout__row">
+                    <button className="btn">Button</button>
+                </div>
+                <div className="page-layout__row">
+                    <button className="btn btn-green m_mr20">Button</button>
+                    <button className="btn btn-blue m_mr20">Button</button>
+                    <button className="btn btn-red m_mr20">Button</button>
+                </div>
+                <div className="page-layout__row">
+                    <button className="btn btn-green btn-medium">Button</button>
+                    <button className="btn btn-blue btn-medium m_ml10">Button</button>
+                    <button className="btn btn-red btn-medium m_ml10">Button</button>
+                </div>
+                <div className="page-layout__row">
+                    <button className="btn btn-green btn-big">Button</button>
+                    <button className="btn btn-blue btn-big m_ml10">Button</button>
+                    <button className="btn btn-red btn-big m_ml10">Button</button>
+                </div>
+            </Block>
+
             <div className="page-layout__row">
                 <a className="btn btn-green btn-medium m_mr10">simple link as button</a>
                 <a className="m_mr10">Simple link</a>
@@ -83,78 +91,75 @@ class PageLayout extends React.Component {
             </div>
             <h2>Popups</h2>
             <div className="page-layout__row">
-                <Popup options={{
-                    contentLabel: 'PAGE_LAYOUT_POPUP_1',
-                    headerText: 'New committee',
-                    buttonText: 'Save',
-                    startFocusName: 'name',
-                    fields: [
-                        {
-                            name: 'text_field',
-                            label: 'Text field',
-                            type: 'text',
-                            value: this.state.popup_1_field_1,
-                        },
-                        {
-                            name: 'mlfield',
-                            label: 'ML Field',
-                            type: 'mltext',
-                            value: this.state.popup_1_field_2,
-                        },
-                        {
-                            name: 'checkbox_field',
-                            label: 'Checkbox field',
-                            type: 'checkbox',
-                            value: this.state.popup_1_field_3,
-                        },
-                    ],
-                    wrapperTag: 'div',
-                    save: (fields_obj, callback, callback_err) => {
+                <Popup
+                    contentLabel={'PAGE_LAYOUT_POPUP_1'}
+                headerText={'New committee'}
+                buttonText={'Save'}
+                startFocusName={'name'}
+                fields={[
+                {
+                    name:'text_field',
+                    label:'Text field',
+                    type:'text',
+                    value:this.state.popup_1_field_1,
+                },
+                {
+                    name:'text_field',
+                    label:'Text field 2',
+                    type: 'text',
+                    value: this.state.popup_1_field_1,
+                }]}
+                    wrapperTag={'div'}
+                    save={(fields_obj, callback, callback_err) => {
                         callback_err('test err');
-                    }
-                }}>
+                    }}
+                >
                     <button className="btn btn-green btn-medium m_mr20">popup with err</button>
                 </Popup>
-                <Popup options={{
-                    contentLabel: 'PAGE_LAYOUT_POPUP_2',
-                    headerText: 'New committee',
-                    buttonText: 'Save',
-                    startFocusName: 'name',
-                    fields: [
-                        {
-                            name: 'text_field',
-                            label: 'Text field',
-                            type: 'text',
-                            value: this.state.popup_1_field_1,
-                        },
-                        {
-                            name: 'mlfield',
-                            label: 'ML Field',
-                            type: 'mltext',
-                            value: this.state.popup_1_field_2,
-                        },
-                        {
-                            name: 'checkbox_field',
-                            label: 'Checkbox field',
-                            type: 'checkbox',
-                            value: this.state.popup_1_field_3,
-                        },
-                    ],
-                    wrapperTag: 'div',
-                    save: (fields_obj, callback, callback_err) => {
-                         // fields_obj = {text_field: "testvalue", mlfield: "testmlvalue", checkbox_field: false}
-
+                <Popup
+                    contentLabel={'PAGE_LAYOUT_POPUP_1'}
+                headerText={'New committee'}
+                buttonText={'Save'}
+                startFocusName={'name'}
+                fields={[
+                {
+                    name:'text_field',
+                    label:'Text field',
+                    type:'text',
+                    value:this.state.popup_1_field_1,
+                },
+                {
+                    name:'text_field',
+                    label:'Text field 2',
+                    type: 'text',
+                    value: this.state.popup_1_field_1,
+                }]}
+                    wrapperTag={'div'}
+                    save={(fields_obj, callback, callback_err) => {
                         callback();
-                        callback_err();
-                    }
-                }}>
-                    <button className="btn btn-blue btn-medium m_mr20">popup</button>
+                        console.log('fields_obj', fields_obj)
+                    }}
+                >
+                    <button className="btn btn-blue btn-medium m_mr20">popup without err</button>
                 </Popup>
             </div>
-            {/*<h2>Grid</h2>*/}
-            <div className="page-layout__row">
-
-            </div>
+            <h2>Grid</h2>
+            <Grid grid_name={"LAYOUT_GRID"} columns={[
+                {
+                    label: "Id",
+                    key: 'id',
+                    value: row => row.id,
+                },
+                {
+                    label: "Name",
+                    key: 'name',
+                    value: row => row.name,
+                    sortable: true,
+                },
+            ]} data={[
+                {id: 1, name: "row one"},
+                {id: 2, name: "row two"},
+            ]}/>
         </div>
     }
 }
