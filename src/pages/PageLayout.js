@@ -159,7 +159,9 @@ class PageLayout extends React.Component {
             ]} data={[
                 {id: 1, name: "row one"},
                 {id: 2, name: "row two"},
-            ]}/>
+            ]}
+            sortField={{column: "id", direction: "asc"}}
+            />
         </div>
     }
 }
