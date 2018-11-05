@@ -165,7 +165,7 @@ class PageLayout extends React.Component {
             ]}
             sortField={{column: "id", direction: "asc"}}
             />
-            <h2>Paginate</h2>
+            <h2>Paginate && QueryParams</h2>
             <Paginate
                 pageCount={10}
                 pageCurrent={QueryParams.parse(this.props.location.pathname)['page'] || 1}
