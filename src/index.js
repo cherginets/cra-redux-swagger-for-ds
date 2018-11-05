@@ -4,7 +4,7 @@ import './styles/index.css';
 import store from './store'
 import {init_client} from "./common/Api";
 import {Provider} from 'react-redux'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Switch} from 'react-router-dom';
 import AppRoute from './pages/Layout/AppRoute'
 import Layout from './pages/Layout/Layout'
 import PageTest from './pages/PageTest';

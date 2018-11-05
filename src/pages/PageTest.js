@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { withRouter, Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {tmp_count_plus} from '../common/Actions'
 import {bindActionCreators} from 'redux'
-import * as globalActions from '../actions/GlobalActions'
+
 class PageTest extends Component {
     constructor(props) {
         super(props);
@@ -28,7 +28,6 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     tmp_count_plus,
-    redirect: (url) => dispatch(globalActions.redirect(url)),
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PageTest))

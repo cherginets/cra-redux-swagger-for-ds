@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import {tmp_count_plus} from '../common/Actions'
 
