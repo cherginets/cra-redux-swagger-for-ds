@@ -18,7 +18,7 @@ init_client(() => {
             <Provider store={store}>
                 <BrowserRouter>
                     <Switch>
-                        <AppRoute layout={Layout} exact path={"/layout"} component={PageLayout}/>
+                        <AppRoute layout={Layout} exact path={"/layout/:page?"} component={PageLayout}/>
                         <AppRoute layout={Layout} exact path={"/test"} component={PageTest}/>
                         <AppRoute layout={Layout} exact path={"/"} component={PageHome}/>
                         <AppRoute layout={Layout}       path={"*"} component={Page404}/>

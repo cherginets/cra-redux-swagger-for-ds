@@ -3,9 +3,12 @@
  */
 import React from 'react';
 import Select from 'react-select';
+import {Link} from 'react-router-dom';
 import Popup from "../_ds/components/Popup";
 import Grid from "../_ds/components/Grid";
 import Block from "../_ds/components/Block";
+import QueryParams from "../_ds/common/QueryParams";
+import Paginate from "../_ds/components/Paginate/Paginate";
 
 class PageLayout extends React.Component {
     state = {
@@ -26,6 +29,7 @@ class PageLayout extends React.Component {
         popup_1_field_3: true,
     };
     render() {
+        console.log('QueryParams.parse(this.props.location.pathname)[\'page\'] || 1', QueryParams.parse(this.props.location.pathname)['page'] || 1);
         return <div className="container">
             <h1>Базовые элементы DS</h1>
             <div className="page-layout__row">
@@ -160,6 +164,17 @@ class PageLayout extends React.Component {
                 {id: 2, name: "row two"},
             ]}
             sortField={{column: "id", direction: "asc"}}
+            />
+            <h2>Paginate</h2>
+            <Paginate
+                pageCount={10}
+                pageCurrent={QueryParams.parse(this.props.location.pathname)['page'] || 1}
+                pageLayout={(i) => {
+                    let filter = QueryParams.parse(this.props.location.pathname);
+                    filter.page = i > 1 ? i : false;
+                    return <Link to={`/layout/${QueryParams.stringify(filter)}`}>{i}</Link>;
+                }}
+                disableInitialCallback={true}
             />
         </div>
     }
